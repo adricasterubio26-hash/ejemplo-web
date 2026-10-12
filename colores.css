@@ -1,0 +1,29 @@
+
+header {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
+    color: #90EE90;
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header nav a {
+    color: #90EE90;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #CCFFCC;
+}
