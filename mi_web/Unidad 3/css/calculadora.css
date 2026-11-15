@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #f1f5f9;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+table {
+    background: #1e293b;
+    padding: 16px;
+    border-radius: 20px;
+    border-spacing: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Pantalla */
+thead td {
+    padding: 0;
+}
+
+#pantalla {
+    width: 100%;
+    height: 70px;
+    padding: 0 16px;
+    font-size: 2rem;
+    text-align: right;
+    color: #22d3ee;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    outline: none;
+    font-family: "Courier New", monospace;
+}
+
+/* Botones */
+td {
+    padding: 0;
+}
+
+button {
+    width: 100%;
+    height: 64px;
+    min-width: 64px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    background: #334155;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #1e293b;
+    transition: transform 0.1s, box-shadow 0.1s, background 0.2s;
+}
+
+button:hover {
+    background: #475569;
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #1e293b;
+}
+
+/* Operadores (última columna de cada fila numérica) */
+tbody tr:nth-child(-n+4) td:last-child button {
+    background: #f59e0b;
+    box-shadow: 0 4px 0 #b45309;
+}
+
+tbody tr:nth-child(-n+4) td:last-child button:hover {
+    background: #fbbf24;
+}
+
+tbody tr:nth-child(-n+4) td:last-child button:active {
+    box-shadow: 0 0 0 #b45309;
+}
+
+/* Igual */
+tbody tr:nth-child(4) td:nth-child(3) button {
+    background: #10b981;
+    box-shadow: 0 4px 0 #047857;
+}
+
+tbody tr:nth-child(4) td:nth-child(3) button:hover {
+    background: #34d399;
+}
+
+tbody tr:nth-child(4) td:nth-child(3) button:active {
+    box-shadow: 0 0 0 #047857;
+}
+
+/* C y AC */
+tbody tr:last-child button {
+    background: #ef4444;
+    box-shadow: 0 4px 0 #b91c1c;
+}
+
+tbody tr:last-child button:hover {
+    background: #f87171;
+}
+
+tbody tr:last-child button:active {
+    box-shadow: 0 0 0 #b91c1c;
+}

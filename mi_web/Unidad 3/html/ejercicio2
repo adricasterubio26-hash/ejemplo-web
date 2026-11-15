@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <script src="../js/ejercicio2.js"></script>
+</head>
+
+
+    <main>
+      <h2>Piedra, papel o tijera</h2>
+      <p class="intro">Elige una opción y juega contra la máquina.</p>
+
+      <section class="juego" aria-label="Juego de piedra, papel o tijera">
+        <input
+          class="game-result"
+          type="text"
+          id="pantalla"
+          placeholder="Elije tu jugada"
+          readonly
+          aria-label="Resultado partida"
+        />
+        <div class="eleccion" aria-label="Elige tu jugada">
+          <button type="button" onclick="piedraPapelTijera('piedra')">
+            Piedra
+          </button>
+          <button type="button" onclick="piedraPapelTijera('papel')">
+            Papel
+          </button>
+          <button type="button" onclick="piedraPapelTijera('tijera')">
+            Tijera
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

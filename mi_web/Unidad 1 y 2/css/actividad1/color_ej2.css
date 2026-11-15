@@ -1,0 +1,25 @@
+body { font-family: Georgia, "Times New Roman", serif; }
+    .flor {
+      min-height: 390px;
+      padding: 12px;
+      background-color: #eee;
+      /* Guarda una imagen de una flor como "flor.jpg" en esta misma carpeta */
+      background-image: url("flor.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    h4 { text-align: center; color: orangered; margin: 0 0 12px; }
+    mark { background: yellow; }
+    .boton { display: inline-block; background: #f2c500; color: white; padding: 12px 14px; text-decoration: none; font-size: 12px; }
+    .texto-pre { font-family: monospace; font-size: 12px; white-space: pre; }
+    .barra-inferior {
+      margin-top: 120px;
+      min-height: 52px;
+      background: cornflowerblue;
+      border: 2px solid #333;
+      padding: 12px;
+      color: white;
+    }
+    .pequeno { font-size: 11px; }

@@ -1,0 +1,201 @@
+/* ============================================
+   HORARIO SEMANAL · estilo "aurora nocturna"
+   ============================================ */
+
+:root {
+  --fondo-1: #0f1020;
+  --fondo-2: #1b1038;
+  --tarjeta: rgba(255, 255, 255, 0.06);
+  --borde: rgba(255, 255, 255, 0.12);
+  --texto: #eef0ff;
+  --texto-suave: #a9adcf;
+
+  /* un color por día */
+  --lunes: #ff6b9d;
+  --martes: #ffa94d;
+  --miercoles: #ffe066;
+  --jueves: #4cd9a6;
+  --viernes: #6ea8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 2.5rem 1rem 4rem;
+  font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  color: var(--texto);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 107, 157, 0.25), transparent 40%),
+    radial-gradient(circle at 88% 12%, rgba(110, 168, 255, 0.25), transparent 40%),
+    radial-gradient(circle at 70% 90%, rgba(76, 217, 166, 0.18), transparent 45%),
+    linear-gradient(160deg, var(--fondo-1), var(--fondo-2));
+  background-attachment: fixed;
+}
+
+/* ---------- Título ---------- */
+h1 {
+  margin: 0 0 2rem;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--lunes), var(--martes), var(--miercoles), var(--jueves), var(--viernes));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 0.8rem auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--lunes), var(--viernes));
+}
+
+/* ---------- Tabla ---------- */
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-collapse: separate;
+  border-spacing: 6px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+th,
+td {
+  text-align: center;
+  padding: 0.85rem 0.4rem;
+  border-radius: 12px;
+}
+
+/* ---------- Cabecera de días ---------- */
+thead th {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #14142b;
+  font-weight: 800;
+}
+
+thead th:nth-child(1) { background: var(--texto-suave); }
+thead th:nth-child(2) { background: var(--lunes); }
+thead th:nth-child(3) { background: var(--martes); }
+thead th:nth-child(4) { background: var(--miercoles); }
+thead th:nth-child(5) { background: var(--jueves); }
+thead th:nth-child(6) { background: var(--viernes); }
+
+/* ---------- Columna de horas ---------- */
+tbody th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--texto-suave);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed var(--borde);
+}
+
+/* ---------- Celdas de asignaturas ---------- */
+td {
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--borde);
+  border-bottom: 3px solid transparent;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* cada asignatura con su color propio (--c) */
+.ENT  { --c: #ff6b9d; }
+.LLMM { --c: #ff8a5c; }
+.SINF { --c: #ffd43b; }
+.BBDD { --c: #8ce99a; }
+.ING  { --c: #38d9a9; }
+.DIG  { --c: #3bc9db; }
+.PROG { --c: #4dabf7; }
+.SOST { --c: #9775fa; }
+.IPE  { --c: #da77f2; }
+.PIM  { --c: #f783ac; }
+
+td[class] {
+  color: var(--c);
+  background: color-mix(in srgb, var(--c) 14%, transparent);
+  border-color: color-mix(in srgb, var(--c) 35%, transparent);
+  border-bottom-color: var(--c);
+}
+
+td[class]:hover {
+  background: var(--c);
+  color: #14142b;
+  box-shadow: 0 8px 22px -6px var(--c);
+  transform: translateY(-3px) scale(1.04);
+  cursor: default;
+}
+
+/* ---------- Recreo ---------- */
+td[colspan] {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.7em;
+  color: var(--texto-suave);
+  border: 1px dashed var(--borde);
+  border-bottom: 1px dashed var(--borde);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.07) 0 10px,
+    transparent 10px 20px
+  );
+}
+
+td[colspan]:hover {
+  transform: none;
+  box-shadow: none;
+  color: var(--texto);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.12) 0 10px,
+    transparent 10px 20px
+  );
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 640px) {
+  body {
+    padding: 1.5rem 0.4rem 3rem;
+  }
+
+  table {
+    padding: 0.4rem;
+    border-spacing: 3px;
+    border-radius: 16px;
+  }
+
+  th,
+  td {
+    padding: 0.6rem 0.1rem;
+    font-size: 0.7rem;
+    border-radius: 8px;
+  }
+
+  thead th {
+    font-size: 0.6rem;
+    letter-spacing: 0.02em;
+  }
+
+  tbody th {
+    font-size: 0.6rem;
+    white-space: normal;
+  }
+}

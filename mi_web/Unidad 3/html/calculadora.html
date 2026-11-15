@@ -1,0 +1,46 @@
+<head>
+    <title>Calculadora</title>
+    <script src="../js/calculadora.js"></script>
+    <link rel="stylesheet" href="../css/calculadora.css">
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <table>
+        <thead>
+            <td colspan="4">
+                <input type="text" id="pantalla" readonly>
+            </td>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button onclick="escribir(7)">7</button></td>
+                <td><button onclick="escribir(8)">8</button></td>
+                <td><button onclick="escribir(9)">9</button></td>
+                <td><button onclick="escribir('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="escribir(4)">4</button></td>
+                <td><button onclick="escribir(5)">5</button></td>
+                <td><button onclick="escribir(6)">6</button></td>
+                <td><button onclick="escribir('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="escribir(1)">1</button></td>
+                <td><button onclick="escribir(2)">2</button></td>
+                <td><button onclick="escribir(3)">3</button></td>
+                <td><button onclick="escribir('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="escribir(0)">0</button></td>
+                <td><button onclick="escribir('.')">.</button></td>
+                <td><button onclick="resolver('=')">=</button></td>
+                <td><button onclick="escribir('+')">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="borrar()">C</button></td>
+                <td colspan="2"><button onclick="borrarTodo()">AC</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
