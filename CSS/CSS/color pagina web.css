@@ -1,21 +1,132 @@
-header{
-    background-color:rgb(219, 55, 4)
-     padding 1cm;
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-footer{
-     background-color:rgb(219, 55, 4)
-    padding 1cm;
+
+/* FONDO DE LA PÁGINA */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(
+        120deg,
+        #00c6ff,
+        #0072ff,
+        #8e44ad,
+        #ff6ec7,
+        #00c6ff
+    );
+    background-size: 400% 400%;
+    animation: fondo 12s ease infinite;
+    text-align: center;
+    padding: 30px;
 }
-table{
-width: 100%;
+
+/* ANIMACIÓN DEL FONDO */
+@keyframes fondo {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    color: white;
+    font-size: 38px;
+    text-transform: uppercase;
+    margin: 30px 0;
+    text-shadow: 3px 3px 5px #333;
+}
+
+/* TÍTULOS SECUNDARIOS */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* CONTENEDOR DE BOTONES */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* TARJETAS */
+.tarjeta {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.90);
+    padding: 25px;
+    margin: 15px;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
+}
+
+/* EFECTO AL PASAR EL RATÓN */
+.tarjeta:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* BOTONES */
+button {
+    background: linear-gradient(45deg, #0072ff, #8e44ad);
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    margin: 8px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* EFECTO DE LOS BOTONES */
+button:hover {
+    background: linear-gradient(45deg, #ff6ec7, #ff9800);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ENLACES */
+a {
+    text-decoration: none;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    color: white;
+    margin-top: 40px;
+    font-size: 15px;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+@media screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .tarjeta {
+        width: 90%;
+        margin: 12px auto;
+    }
+
+    button {
+        font-size: 14px;
+    }
 
 }
-thead{
 
-}
-td,th{
-    border: 1cm;
-}
-.tdh{
-     background-color:rgb(219, 55, 4)
-}
